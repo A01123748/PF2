@@ -1,0 +1,67 @@
+//
+//  InterfaceController.swift
+//  QR_Mapas_Watch Extension
+//
+//  Created by Eliseo Fuentes on 10/9/16.
+//  Copyright © 2016 Eliseo Fuentes. All rights reserved.
+//
+
+import WatchKit
+import Foundation
+import CoreData
+import MapKit
+
+class Point: NSManagedObject {
+    @NSManaged var image: Data?
+    @NSManaged var latitude: NSNumber
+    @NSManaged var longitude: NSNumber
+    @NSManaged var name: String
+}
+
+class Route: NSManagedObject {
+    @NSManaged var name: String
+}
+
+
+class InterfaceController: WKInterfaceController, NSFetchedResultsControllerDelegate{
+
+    var managedObjectContext: NSManagedObjectContext? = nil
+
+    @IBOutlet var map: WKInterfaceMap!
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+    }
+
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+        // Configure interface objects here
+        let fetchRequest = NSFetchRequest(entityName: "Route")
+        
+        // Create a sort descriptor object that sorts on the "name"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+         var routes = [Route]()
+        do{
+        routes = try DataManager.getContext().fetch(fetchRequest) as! [Route]
+        }
+        catch{
+            print("error")
+        }
+        for route in routes{
+            print(route.name)
+        }
+    }
+
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
+
+}
