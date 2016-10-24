@@ -58,7 +58,7 @@ class MasterViewController: UIViewController, NSFetchedResultsControllerDelegate
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "generateRoute" {
+        if segue.identifier == "startRoute" {
             //if let indexPath = self.tableView.indexPathForSelectedRow {
             //let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
                 let controller = (segue.destination as! UINavigationController).topViewController as! MapsVC
@@ -68,50 +68,17 @@ class MasterViewController: UIViewController, NSFetchedResultsControllerDelegate
                 controller.navigationItem.leftItemsSupplementBackButton = true
             //}
         }
-    }
-
-    /* MARK: - Table View
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.fetchedResultsController.sections?.count ?? 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section]
-        return sectionInfo.numberOfObjects
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-        self.configureCell(cell, withObject: object)
-        return cell
-    }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            let context = self.fetchedResultsController.managedObjectContext
-            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject)
-                
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                //print("Unresolved error \(error), \(error.userInfo)")
-                abort()
-            }
+        else if segue.identifier == "showSavedRoutes" {
+            //if let indexPath = self.tableView.indexPathForSelectedRow {
+            //let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
+            let controller = segue.destination as! SavedRoutesVC
+            //controller.detailItem = object
+            controller.managedObjectContext = self.managedObjectContext
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+            //}
         }
     }
-
-    func configureCell(cell: UITableViewCell, withObject object: NSManagedObject) {
-        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
-    }
-*/
+    
     }
 

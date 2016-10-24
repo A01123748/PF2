@@ -63,7 +63,6 @@ class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         if(name!.text != ""){
             sourceViewController.annotation.title = name!.text
             sourceViewController.annotation.photo = photo
-            print(sourceViewController.annotation.coordinate)
             sourceViewController.cAnnos.append(sourceViewController.annotation)
             sourceViewController.mapa.addAnnotation(sourceViewController.annotation)
             var annotations = sourceViewController.mapa.annotations
@@ -80,13 +79,13 @@ class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     j+=1
                 }
             }
-            navigationController?.popViewController(animated: true)
+            _ = navigationController?.popViewController(animated: true)
         }
     }
 
     @IBAction func cancel(_ sender: AnyObject) {
         //dismissViewControllerAnimated(true, completion: nil)
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
         //self.navigationController?.popViewControllerAnimated(true)
     }
 }

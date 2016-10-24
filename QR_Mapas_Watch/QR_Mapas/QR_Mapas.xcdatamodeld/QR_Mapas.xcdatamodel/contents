@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="Points" representedClassName=".Points">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Point" representedClassName=".Points">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String">
             <userInfo/>
         </attribute>
@@ -12,10 +12,10 @@
     </entity>
     <entity name="Route" representedClassName=".Route" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="points" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Points" inverseName="route" inverseEntity="Points" syncable="YES"/>
+        <relationship name="points" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Point" inverseName="route" inverseEntity="Point" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Points" positionX="261" positionY="189" width="128" height="118"/>
-        <element name="Route" positionX="637" positionY="189" width="128" height="73"/>
+        <element name="Point" positionX="261" positionY="189" width="128" height="120"/>
+        <element name="Route" positionX="637" positionY="189" width="128" height="75"/>
     </elements>
 </model>

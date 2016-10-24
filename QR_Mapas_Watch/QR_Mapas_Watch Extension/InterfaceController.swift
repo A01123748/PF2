@@ -37,15 +37,15 @@ class InterfaceController: WKInterfaceController, NSFetchedResultsControllerDele
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         // Configure interface objects here
-        let fetchRequest = NSFetchRequest(entityName: "Route")
+        //let fetchRequest = NSFetchRequest(entityName: "Route")
         
         // Create a sort descriptor object that sorts on the "name"
         // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        //let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         
         // Set the list of sort descriptors in the fetch request,
         // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        /*fetchRequest.sortDescriptors = [sortDescriptor]
         
          var routes = [Route]()
         do{
@@ -56,7 +56,7 @@ class InterfaceController: WKInterfaceController, NSFetchedResultsControllerDele
         }
         for route in routes{
             print(route.name)
-        }
+        }*/
     }
 
     override func didDeactivate() {
