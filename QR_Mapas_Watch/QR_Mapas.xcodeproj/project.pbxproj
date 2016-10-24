@@ -17,57 +17,28 @@
 		913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */; };
 		913CF93A1DA9C07400760749 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9391DA9C07400760749 /* MapsVC.swift */; };
 		913CF93C1DAAFB4400760749 /* PINDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */; };
-		91B99F2F1DBD2FDC00528E0F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F2E1DBD2FDC00528E0F /* TableViewController.swift */; };
 		91B99F311DBD440300528E0F /* ShowSavedRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F301DBD440300528E0F /* ShowSavedRouteVC.swift */; };
-		91C9ED781DAB419C000F58E6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED761DAB419C000F58E6 /* Interface.storyboard */; };
-		91C9ED7A1DAB419C000F58E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED791DAB419C000F58E6 /* Assets.xcassets */; };
-		91C9ED811DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED871DAB419C000F58E6 /* InterfaceController.swift */; };
-		91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */; };
-		91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */; };
-		91C9ED8E1DAB419C000F58E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */; };
-		91C9ED921DAB419C000F58E6 /* QR_Mapas_Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */; };
-		91C9EDA21DABECDE000F58E6 /* WatchCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */; };
-		91C9EDA41DABED18000F58E6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9EDA31DABED18000F58E6 /* DataManager.swift */; };
+		91B99F391DBDA8E400528E0F /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F341DBDA8E400528E0F /* ARAnnotation.swift */; };
+		91B99F3A1DBDA8E400528E0F /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F351DBDA8E400528E0F /* ARAnnotationView.swift */; };
+		91B99F3B1DBDA8E400528E0F /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F361DBDA8E400528E0F /* ARConfiguration.swift */; };
+		91B99F3C1DBDA8E400528E0F /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F371DBDA8E400528E0F /* ARTrackingManager.swift */; };
+		91B99F3D1DBDA8E400528E0F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F381DBDA8E400528E0F /* ARViewController.swift */; };
+		91B99F3F1DBDA8EC00528E0F /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F3E1DBDA8EC00528E0F /* DebugMapViewController.swift */; };
+		91B99F451DBDA8F400528E0F /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F411DBDA8F400528E0F /* DebugMapViewController.xib */; };
+		91B99F461DBDA8F400528E0F /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F421DBDA8F400528E0F /* hdar_close.png */; };
+		91B99F471DBDA8F400528E0F /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F431DBDA8F400528E0F /* hdar_close@2x.png */; };
+		91B99F481DBDA8F400528E0F /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F441DBDA8F400528E0F /* hdar_close@3x.png */; };
+		91B99F4A1DBDA91A00528E0F /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */; };
 		91CE55D71DBC09F900B208CC /* SavedRoutesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE55D61DBC09F900B208CC /* SavedRoutesVC.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		91C9ED821DAB419C000F58E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 913CF9111DA99A7500760749 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91C9ED7F1DAB419C000F58E6;
-			remoteInfo = "QR_Mapas_Watch Extension";
-		};
-		91C9ED901DAB419C000F58E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 913CF9111DA99A7500760749 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91C9ED731DAB419B000F58E6;
-			remoteInfo = QR_Mapas_Watch;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		91C9ED981DAB419C000F58E6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				91C9ED811DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		91C9ED9A1DAB419C000F58E6 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				91C9ED921DAB419C000F58E6 /* QR_Mapas_Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,8 +47,6 @@
 
 /* Begin PBXFileReference section */
 		911CA87A1DAB3A8200A9A0C4 /* NavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
-		913BC3C51DAC521600E2CD0F /* QR_Mapas_Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QR_Mapas_Watch.entitlements; sourceTree = "<group>"; };
-		913BC3C61DAC522200E2CD0F /* QR_Mapas_Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "QR_Mapas_Watch Extension.entitlements"; sourceTree = "<group>"; };
 		913CF9191DA99A7500760749 /* QR_Mapas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR_Mapas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913CF91C1DA99A7500760749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913CF91F1DA99A7500760749 /* QR_Mapas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QR_Mapas.xcdatamodel; sourceTree = "<group>"; };
@@ -89,36 +58,25 @@
 		913CF92D1DA99A7600760749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913CF9391DA9C07400760749 /* MapsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINDetailsVC.swift; sourceTree = "<group>"; };
-		91B99F2E1DBD2FDC00528E0F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = QR_Mapas/TableViewController.swift; sourceTree = "<group>"; };
 		91B99F301DBD440300528E0F /* ShowSavedRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSavedRouteVC.swift; sourceTree = "<group>"; };
-		91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR_Mapas_Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C9ED771DAB419C000F58E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		91C9ED791DAB419C000F58E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91C9ED7B1DAB419C000F58E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QR_Mapas_Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C9ED861DAB419C000F58E6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		91C9ED871DAB419C000F58E6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91C9ED8F1DAB419C000F58E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91B99F341DBDA8E400528E0F /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		91B99F351DBDA8E400528E0F /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		91B99F361DBDA8E400528E0F /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		91B99F371DBDA8E400528E0F /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		91B99F381DBDA8E400528E0F /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		91B99F3E1DBDA8EC00528E0F /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		91B99F411DBDA8F400528E0F /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		91B99F421DBDA8F400528E0F /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		91B99F431DBDA8F400528E0F /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		91B99F441DBDA8F400528E0F /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAnnotationView.swift; sourceTree = "<group>"; };
 		91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR_Mapas_Watch-Bridging-Header.h"; sourceTree = "<group>"; };
 		91C9EDA01DABE824000F58E6 /* QR_Mapas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QR_Mapas.entitlements; sourceTree = "<group>"; };
-		91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCoreDataProxy.swift; sourceTree = "<group>"; };
-		91C9EDA31DABED18000F58E6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		91C9EDA51DABF241000F58E6 /* WatchCoreDataProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchCoreDataProxy.h; sourceTree = "<group>"; };
 		91CE55D61DBC09F900B208CC /* SavedRoutesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRoutesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		913CF9161DA99A7500760749 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C9ED7D1DAB419C000F58E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,10 +89,9 @@
 		913CF9101DA99A7500760749 = {
 			isa = PBXGroup;
 			children = (
-				91B99F2E1DBD2FDC00528E0F /* TableViewController.swift */,
+				91B99F401DBDA8F400528E0F /* Resources */,
+				91B99F321DBDA87700528E0F /* Classes */,
 				913CF91B1DA99A7500760749 /* QR_Mapas */,
-				91C9ED751DAB419B000F58E6 /* QR_Mapas_Watch */,
-				91C9ED841DAB419C000F58E6 /* QR_Mapas_Watch Extension */,
 				913CF91A1DA99A7500760749 /* Products */,
 				91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */,
 			);
@@ -144,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				913CF9191DA99A7500760749 /* QR_Mapas.app */,
-				91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */,
-				91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +117,7 @@
 				91CE55D61DBC09F900B208CC /* SavedRoutesVC.swift */,
 				91B99F301DBD440300528E0F /* ShowSavedRouteVC.swift */,
 				913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */,
+				91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */,
 				913CF9251DA99A7600760749 /* Main.storyboard */,
 				913CF9281DA99A7600760749 /* Assets.xcassets */,
 				913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */,
@@ -171,40 +127,36 @@
 			path = QR_Mapas;
 			sourceTree = "<group>";
 		};
-		91C9ED751DAB419B000F58E6 /* QR_Mapas_Watch */ = {
+		91B99F321DBDA87700528E0F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				913BC3C51DAC521600E2CD0F /* QR_Mapas_Watch.entitlements */,
-				91C9ED761DAB419C000F58E6 /* Interface.storyboard */,
-				91C9ED791DAB419C000F58E6 /* Assets.xcassets */,
-				91C9ED7B1DAB419C000F58E6 /* Info.plist */,
+				91B99F341DBDA8E400528E0F /* ARAnnotation.swift */,
+				91B99F351DBDA8E400528E0F /* ARAnnotationView.swift */,
+				91B99F361DBDA8E400528E0F /* ARConfiguration.swift */,
+				91B99F371DBDA8E400528E0F /* ARTrackingManager.swift */,
+				91B99F381DBDA8E400528E0F /* ARViewController.swift */,
+				91B99F331DBDA8AA00528E0F /* Debug */,
 			);
-			path = QR_Mapas_Watch;
+			name = Classes;
 			sourceTree = "<group>";
 		};
-		91C9ED841DAB419C000F58E6 /* QR_Mapas_Watch Extension */ = {
+		91B99F331DBDA8AA00528E0F /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				913BC3C61DAC522200E2CD0F /* QR_Mapas_Watch Extension.entitlements */,
-				91C9EDA31DABED18000F58E6 /* DataManager.swift */,
-				91C9ED871DAB419C000F58E6 /* InterfaceController.swift */,
-				91C9ED891DAB419C000F58E6 /* ExtensionDelegate.swift */,
-				91C9ED8B1DAB419C000F58E6 /* NotificationController.swift */,
-				91C9EDA51DABF241000F58E6 /* WatchCoreDataProxy.h */,
-				91C9EDA11DABECDE000F58E6 /* WatchCoreDataProxy.swift */,
-				91C9ED8D1DAB419C000F58E6 /* Assets.xcassets */,
-				91C9ED8F1DAB419C000F58E6 /* Info.plist */,
-				91C9ED851DAB419C000F58E6 /* Supporting Files */,
+				91B99F3E1DBDA8EC00528E0F /* DebugMapViewController.swift */,
 			);
-			path = "QR_Mapas_Watch Extension";
+			name = Debug;
 			sourceTree = "<group>";
 		};
-		91C9ED851DAB419C000F58E6 /* Supporting Files */ = {
+		91B99F401DBDA8F400528E0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				91C9ED861DAB419C000F58E6 /* PushNotificationPayload.apns */,
+				91B99F411DBDA8F400528E0F /* DebugMapViewController.xib */,
+				91B99F421DBDA8F400528E0F /* hdar_close.png */,
+				91B99F431DBDA8F400528E0F /* hdar_close@2x.png */,
+				91B99F441DBDA8F400528E0F /* hdar_close@3x.png */,
 			);
-			name = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,46 +174,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				91C9ED911DAB419C000F58E6 /* PBXTargetDependency */,
 			);
 			name = QR_Mapas;
 			productName = QR_Mapas;
 			productReference = 913CF9191DA99A7500760749 /* QR_Mapas.app */;
 			productType = "com.apple.product-type.application";
-		};
-		91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 91C9ED991DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch" */;
-			buildPhases = (
-				91C9ED721DAB419B000F58E6 /* Resources */,
-				91C9ED981DAB419C000F58E6 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				91C9ED831DAB419C000F58E6 /* PBXTargetDependency */,
-			);
-			name = QR_Mapas_Watch;
-			productName = QR_Mapas_Watch;
-			productReference = 91C9ED741DAB419B000F58E6 /* QR_Mapas_Watch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 91C9ED971DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch Extension" */;
-			buildPhases = (
-				91C9ED7C1DAB419C000F58E6 /* Sources */,
-				91C9ED7D1DAB419C000F58E6 /* Frameworks */,
-				91C9ED7E1DAB419C000F58E6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "QR_Mapas_Watch Extension";
-			productName = "QR_Mapas_Watch Extension";
-			productReference = 91C9ED801DAB419C000F58E6 /* QR_Mapas_Watch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -274,26 +191,6 @@
 				ORGANIZATIONNAME = "Eliseo Fuentes";
 				TargetAttributes = {
 					913CF9181DA99A7500760749 = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SYEJ6UM9ES;
-						LastSwiftMigration = 0800;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					91C9ED731DAB419B000F58E6 = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SYEJ6UM9ES;
-						LastSwiftMigration = 0800;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
-					91C9ED7F1DAB419C000F58E6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SYEJ6UM9ES;
 						LastSwiftMigration = 0800;
@@ -319,8 +216,6 @@
 			projectRoot = "";
 			targets = (
 				913CF9181DA99A7500760749 /* QR_Mapas */,
-				91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */,
-				91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -331,25 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */,
+				91B99F461DBDA8F400528E0F /* hdar_close.png in Resources */,
+				91B99F481DBDA8F400528E0F /* hdar_close@3x.png in Resources */,
 				913CF9291DA99A7600760749 /* Assets.xcassets in Resources */,
 				913CF9271DA99A7600760749 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C9ED721DAB419B000F58E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C9ED7A1DAB419C000F58E6 /* Assets.xcassets in Resources */,
-				91C9ED781DAB419C000F58E6 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C9ED7E1DAB419C000F58E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C9ED8E1DAB419C000F58E6 /* Assets.xcassets in Resources */,
+				91B99F471DBDA8F400528E0F /* hdar_close@2x.png in Resources */,
+				91B99F451DBDA8F400528E0F /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,44 +243,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */,
+				91B99F391DBDA8E400528E0F /* ARAnnotation.swift in Sources */,
 				913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */,
+				91B99F3B1DBDA8E400528E0F /* ARConfiguration.swift in Sources */,
 				913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */,
 				91B99F311DBD440300528E0F /* ShowSavedRouteVC.swift in Sources */,
 				913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */,
 				91CE55D71DBC09F900B208CC /* SavedRoutesVC.swift in Sources */,
 				913CF93C1DAAFB4400760749 /* PINDetailsVC.swift in Sources */,
+				91B99F3D1DBDA8E400528E0F /* ARViewController.swift in Sources */,
 				913CF9241DA99A7600760749 /* DetailViewController.swift in Sources */,
-				91B99F2F1DBD2FDC00528E0F /* TableViewController.swift in Sources */,
+				91B99F4A1DBDA91A00528E0F /* TestAnnotationView.swift in Sources */,
+				91B99F3F1DBDA8EC00528E0F /* DebugMapViewController.swift in Sources */,
+				91B99F3C1DBDA8E400528E0F /* ARTrackingManager.swift in Sources */,
+				91B99F3A1DBDA8E400528E0F /* ARAnnotationView.swift in Sources */,
 				913CF93A1DA9C07400760749 /* MapsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91C9ED7C1DAB419C000F58E6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C9ED8C1DAB419C000F58E6 /* NotificationController.swift in Sources */,
-				91C9EDA41DABED18000F58E6 /* DataManager.swift in Sources */,
-				91C9ED8A1DAB419C000F58E6 /* ExtensionDelegate.swift in Sources */,
-				91C9ED881DAB419C000F58E6 /* InterfaceController.swift in Sources */,
-				91C9EDA21DABECDE000F58E6 /* WatchCoreDataProxy.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		91C9ED831DAB419C000F58E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 91C9ED7F1DAB419C000F58E6 /* QR_Mapas_Watch Extension */;
-			targetProxy = 91C9ED821DAB419C000F58E6 /* PBXContainerItemProxy */;
-		};
-		91C9ED911DAB419C000F58E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 91C9ED731DAB419B000F58E6 /* QR_Mapas_Watch */;
-			targetProxy = 91C9ED901DAB419C000F58E6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		913CF9251DA99A7600760749 /* Main.storyboard */ = {
@@ -415,14 +278,6 @@
 				913CF92B1DA99A7600760749 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		91C9ED761DAB419C000F58E6 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91C9ED771DAB419C000F58E6 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -548,81 +403,6 @@
 			};
 			name = Release;
 		};
-		91C9ED931DAB419C000F58E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = QR_Mapas_Watch/QR_Mapas_Watch.entitlements;
-				IBSC_MODULE = QR_Mapas_Watch_Extension;
-				INFOPLIST_FILE = QR_Mapas_Watch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fkts.QRMapas.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "QR_Mapas_Watch-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		91C9ED941DAB419C000F58E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = QR_Mapas_Watch/QR_Mapas_Watch.entitlements;
-				IBSC_MODULE = QR_Mapas_Watch_Extension;
-				INFOPLIST_FILE = QR_Mapas_Watch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fkts.QRMapas.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "QR_Mapas_Watch-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
-		91C9ED951DAB419C000F58E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "QR_Mapas_Watch Extension/QR_Mapas_Watch Extension.entitlements";
-				INFOPLIST_FILE = "QR_Mapas_Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fkts.QRMapas.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		91C9ED961DAB419C000F58E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "QR_Mapas_Watch Extension/QR_Mapas_Watch Extension.entitlements";
-				INFOPLIST_FILE = "QR_Mapas_Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fkts.QRMapas.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,24 +420,6 @@
 			buildConfigurations = (
 				913CF9311DA99A7600760749 /* Debug */,
 				913CF9321DA99A7600760749 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		91C9ED971DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				91C9ED951DAB419C000F58E6 /* Debug */,
-				91C9ED961DAB419C000F58E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		91C9ED991DAB419C000F58E6 /* Build configuration list for PBXNativeTarget "QR_Mapas_Watch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				91C9ED931DAB419C000F58E6 /* Debug */,
-				91C9ED941DAB419C000F58E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -448,6 +448,12 @@
                                             <segue destination="JEX-9P-axG" kind="show" id="WQn-56-iom"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LpA-R0-wUb"/>
+                                    <barButtonItem title="AR" id="sOP-Ea-Qvp">
+                                        <connections>
+                                            <action selector="iniciarRA:" destination="XFh-Ux-zw7" id="eJm-Nl-DUb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

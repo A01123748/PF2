@@ -12,13 +12,13 @@ import CoreLocation
 import CoreData
 
 
-class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate, MKMapViewDelegate, NSFetchedResultsControllerDelegate{
+class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, NSFetchedResultsControllerDelegate, ARDataSource{
     
     @IBOutlet weak var mapa: MKMapView!
     fileprivate let manejador = CLLocationManager()
     var managedObjectContext: NSManagedObjectContext? = nil
     var cAnnos = [CustomPointAnnotation]()
-    
+    var currentLocation:CLLocation? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +30,14 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
         self.configureView()
     }
     
+    func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let vista = TestAnnotationView()
+        vista.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        vista.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
+        return vista
+    }
+
+    
     func configureView() {
         if let detail = self.detailItem {
             print(self.detailItem?.name.description)
@@ -38,7 +46,6 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
             let ps = self.detailItem?.value(forKey: "points") as! NSOrderedSet
             var origen:MKMapItem
             var destino:MKMapItem
-            print(ps.count)
             
             let span = MKCoordinateSpanMake(0.015, 0.015)
             let origenCoor = CLLocationCoordinate2DMake( CLLocationDegrees((ps[0] as! NSManagedObject).value(forKey: "latitude")as! Double) , (ps[0] as! NSManagedObject).value(forKey: "longitude") as! Double)
@@ -49,13 +56,9 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
             for i in 0..<ps.count-1{
                 let origenCoor = CLLocationCoordinate2DMake( CLLocationDegrees((ps[i] as! NSManagedObject).value(forKey: "latitude")as! Double) , (ps[i] as! NSManagedObject).value(forKey: "longitude") as! Double)
                 let destCoor = CLLocationCoordinate2DMake( CLLocationDegrees((ps[i+1] as! NSManagedObject).value(forKey: "latitude")as! Double) , (ps[i+1] as! NSManagedObject).value(forKey: "longitude") as! Double)
-                print((ps[i] as! NSManagedObject).value(forKey: "longitude")!)
-                print((ps[i] as! NSManagedObject).value(forKey: "latitude")!)
-                print((ps[i] as! NSManagedObject).value(forKey: "image"))
-                print((ps[i] as! NSManagedObject).value(forKey: "name")!)
                 origen = MKMapItem(placemark: MKPlacemark(coordinate: origenCoor))
                 destino = MKMapItem(placemark: MKPlacemark(coordinate: destCoor))
-                var an = CustomPointAnnotation()
+                let an = CustomPointAnnotation()
                 an.coordinate = origenCoor
                 an.title = (ps[i] as! NSManagedObject).value(forKey: "name") as! String?
                 mapa.addAnnotation(an)
@@ -63,7 +66,7 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
             }
             
             let destCoor = CLLocationCoordinate2DMake( CLLocationDegrees((ps[ps.count-1] as! NSManagedObject).value(forKey: "latitude")as! Double) , (ps[ps.count-1] as! NSManagedObject).value(forKey: "longitude") as! Double)
-            var an = CustomPointAnnotation()
+            let an = CustomPointAnnotation()
             an.coordinate = destCoor
             an.title = (ps[ps.count-1] as! NSManagedObject).value(forKey: "name") as! String?
             mapa.addAnnotation(an)
@@ -86,23 +89,9 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
         }
     }
     
-    /*func insertPin( latitude: CLLocationDegrees, longitude: CLLocationDegrees,isUpdate:Bool, measuredDistance:Double){
-       
-        currentLocation = CLLocation.init(latitude: latitude, longitude: longitude)
-        let pin = MKPointAnnotation()
-        pin.coordinate.latitude = latitude
-        pin.coordinate.longitude = longitude
-        let latP = String(format: "%.3f", latitude)
-        let longP = String(format: "%.3f", longitude)
-        
-        pin.title = "Long: \(longP)º, Lat: \(latP)º"
-        if(isUpdate){
-            distance+=measuredDistance
-        }
-        let distanceP = String(format: "%.3f", distance)
-        pin.subtitle = "Ditancia recorrida: \(distanceP)m"
-        mapa.addAnnotation(pin)
-    }*/
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = manager.location!
+    }
     
     func mapView(_ mapView: MKMapView,
                  viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -180,6 +169,67 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, UIPopoverPr
         didSet {
             // Update the view.
         }
+    }
+    
+    private func obtainAn(latitud:Double,longitud: Double, delta: Double)->Array<ARAnnotation>
+    {
+        var anots: [ARAnnotation] = []
+        srand48(3)
+        
+        let ps = self.detailItem?.value(forKey: "points") as! NSOrderedSet
+        
+        for i in 0..<ps.count{
+            let ano = ARAnnotation()
+            let origenCoor = CLLocationCoordinate2DMake( CLLocationDegrees((ps[i] as! NSManagedObject).value(forKey: "latitude")as! Double) , (ps[i] as! NSManagedObject).value(forKey: "longitude") as! Double)
+            ano.location = CLLocation(latitude: origenCoor.latitude, longitude: origenCoor.longitude)
+            //self.obtainPos(latitud: origenCoor.latitude, longitud: origenCoor.longitude, delta: delta)
+            ano.title = (ps[i] as! NSManagedObject).value(forKey: "name") as! String?
+            anots.append(ano)
+        }
+        return anots
+    }
+    
+    private func obtainPos(latitud: Double, longitud: Double, delta: Double) -> CLLocation{
+        var lat = latitud
+        var lon = longitud
+        
+        let coorDelta = -(delta/2) + drand48() * delta
+        lat += coorDelta
+        lon += coorDelta
+        return CLLocation(latitude: lat, longitude: lon)
+    }
+    
+    @IBAction func iniciarRA(_ sender: AnyObject) {
+        iniciaRAG()
+    }
+    
+    func iniciaRAG(){
+        
+        let lat = currentLocation?.coordinate.latitude
+        let lon = currentLocation?.coordinate.longitude
+        let delta = 0.05
+        let annos = obtainAn(latitud: lat!, longitud: lon!, delta: delta)
+        
+        
+        let arViewController = ARViewController()
+        arViewController.dataSource = self
+        arViewController.maxDistance = 0
+        arViewController.maxVisibleAnnotations = 100
+        arViewController.maxVerticalLevel = 5
+        arViewController.headingSmoothingFactor = 0.05
+        arViewController.trackingManager.userDistanceFilter = 25
+        arViewController.trackingManager.reloadDistanceFilter = 75
+        arViewController.setAnnotations(annos)
+        arViewController.uiOptions.debugEnabled = true
+        arViewController.uiOptions.closeButtonEnabled = true
+        //arViewController.interfaceOrientationMask = .landscape
+        arViewController.onDidFailToFindLocation =
+            {
+                [weak self, weak arViewController] elapsedSeconds, acquiredLocationBefore in
+                // Show alert and dismiss
+        }
+        self.present(arViewController, animated: true, completion: nil)
+        
     }
 }
 

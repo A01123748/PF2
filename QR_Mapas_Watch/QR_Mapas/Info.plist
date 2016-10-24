@@ -30,9 +30,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Maps</string>
+	<string>Routing</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Maps</string>
+	<string>Routing</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Routing</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
