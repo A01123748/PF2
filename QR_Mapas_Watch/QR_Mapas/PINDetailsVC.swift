@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var coordinates: UILabel!
@@ -20,6 +20,7 @@ class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
+        name.delegate = self
     }
 
     // MARK: - Navigation
@@ -87,5 +88,9 @@ class PINDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         //dismissViewControllerAnimated(true, completion: nil)
         _ = navigationController?.popViewController(animated: true)
         //self.navigationController?.popViewControllerAnimated(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
