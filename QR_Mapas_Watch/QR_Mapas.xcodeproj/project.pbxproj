@@ -17,6 +17,8 @@
 		913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */; };
 		913CF93A1DA9C07400760749 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF9391DA9C07400760749 /* MapsVC.swift */; };
 		913CF93C1DAAFB4400760749 /* PINDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */; };
+		91641C281DBE8A3F00973799 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91641C271DBE8A3F00973799 /* CustomTableViewCell.swift */; };
+		91641C2A1DBE8BDF00973799 /* event.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91641C291DBE8BDF00973799 /* event.jpg */; };
 		91B99F311DBD440300528E0F /* ShowSavedRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F301DBD440300528E0F /* ShowSavedRouteVC.swift */; };
 		91B99F391DBDA8E400528E0F /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F341DBDA8E400528E0F /* ARAnnotation.swift */; };
 		91B99F3A1DBDA8E400528E0F /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F351DBDA8E400528E0F /* ARAnnotationView.swift */; };
@@ -60,6 +62,8 @@
 		913CF92D1DA99A7600760749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913CF9391DA9C07400760749 /* MapsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINDetailsVC.swift; sourceTree = "<group>"; };
+		91641C271DBE8A3F00973799 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		91641C291DBE8BDF00973799 /* event.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = event.jpg; sourceTree = "<group>"; };
 		91B99F301DBD440300528E0F /* ShowSavedRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSavedRouteVC.swift; sourceTree = "<group>"; };
 		91B99F341DBDA8E400528E0F /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
 		91B99F351DBDA8E400528E0F /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */,
 				91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */,
 				913CF9251DA99A7600760749 /* Main.storyboard */,
+				91641C271DBE8A3F00973799 /* CustomTableViewCell.swift */,
 				91B99F4D1DBDC76A00528E0F /* EventDetailsVC.swift */,
 				91B99F4B1DBDBFB100528E0F /* EventsVC.swift */,
 				913CF9281DA99A7600760749 /* Assets.xcassets */,
@@ -157,6 +162,7 @@
 		91B99F401DBDA8F400528E0F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				91641C291DBE8BDF00973799 /* event.jpg */,
 				91B99F411DBDA8F400528E0F /* DebugMapViewController.xib */,
 				91B99F421DBDA8F400528E0F /* hdar_close.png */,
 				91B99F431DBDA8F400528E0F /* hdar_close@2x.png */,
@@ -233,6 +239,7 @@
 			files = (
 				913CF92C1DA99A7600760749 /* LaunchScreen.storyboard in Resources */,
 				91B99F461DBDA8F400528E0F /* hdar_close.png in Resources */,
+				91641C2A1DBE8BDF00973799 /* event.jpg in Resources */,
 				91B99F481DBDA8F400528E0F /* hdar_close@3x.png in Resources */,
 				913CF9291DA99A7600760749 /* Assets.xcassets in Resources */,
 				913CF9271DA99A7600760749 /* Main.storyboard in Resources */,
@@ -253,6 +260,7 @@
 				91B99F391DBDA8E400528E0F /* ARAnnotation.swift in Sources */,
 				913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */,
 				91B99F3B1DBDA8E400528E0F /* ARConfiguration.swift in Sources */,
+				91641C281DBE8A3F00973799 /* CustomTableViewCell.swift in Sources */,
 				91B99F4E1DBDC76A00528E0F /* EventDetailsVC.swift in Sources */,
 				913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */,
 				91B99F311DBD440300528E0F /* ShowSavedRouteVC.swift in Sources */,

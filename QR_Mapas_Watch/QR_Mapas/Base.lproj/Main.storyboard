@@ -205,14 +205,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="l3a-7X-sh8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="l3a-7X-sh8" customClass="CustomTableViewCell" customModule="QR_Mapas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3a-7X-sh8" id="tme-OM-YQC">
                                     <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efs-lM-xq8">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U1K-xp-YxK">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="kfs-Dl-ij5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zet-oy-8BB">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="96" id="t0F-EP-5z1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Efs-lM-xq8" firstAttribute="leading" secondItem="U1K-xp-YxK" secondAttribute="trailing" constant="8" symbolic="YES" id="Ae7-or-76A"/>
+                                        <constraint firstItem="U1K-xp-YxK" firstAttribute="top" secondItem="tme-OM-YQC" secondAttribute="top" id="D0H-GW-H9Y"/>
+                                        <constraint firstAttribute="bottom" secondItem="U1K-xp-YxK" secondAttribute="bottom" id="Lvb-bN-YzB"/>
+                                        <constraint firstItem="U1K-xp-YxK" firstAttribute="leading" secondItem="tme-OM-YQC" secondAttribute="leading" constant="8" id="bW4-rM-iJg"/>
+                                        <constraint firstItem="Efs-lM-xq8" firstAttribute="centerY" secondItem="U1K-xp-YxK" secondAttribute="centerY" id="hDb-KT-8TK"/>
+                                        <constraint firstItem="zet-oy-8BB" firstAttribute="top" secondItem="tme-OM-YQC" secondAttribute="topMargin" constant="2" id="hlW-Qu-hrZ"/>
+                                        <constraint firstItem="zet-oy-8BB" firstAttribute="leading" secondItem="Efs-lM-xq8" secondAttribute="trailing" constant="8" symbolic="YES" id="jwp-b0-Uzb"/>
+                                        <constraint firstItem="zet-oy-8BB" firstAttribute="trailing" secondItem="tme-OM-YQC" secondAttribute="trailingMargin" id="o3f-Na-02X"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="zet-oy-8BB" id="t34-RU-ifP"/>
+                                    <outlet property="titleLabel" destination="Efs-lM-xq8" id="Roy-Z1-q8H"/>
                                     <segue destination="K4d-FD-4JQ" kind="showDetail" id="I7A-4I-zau"/>
                                 </connections>
                             </tableViewCell>
@@ -225,7 +257,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7w-md-PSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2223" y="-2133"/>
+            <point key="canvasLocation" x="-2223.1999999999998" y="-2133.2833583208399"/>
         </scene>
         <!--Event DetailsVC-->
         <scene sceneID="swy-nG-SxQ">
@@ -595,6 +627,9 @@
             <point key="canvasLocation" x="204" y="-951"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="event.jpg" width="400" height="400"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WQn-56-iom"/>
     </inferredMetricsTieBreakers>

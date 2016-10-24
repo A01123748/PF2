@@ -61,11 +61,12 @@ class EventsVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! CustomTableViewCell
 
         // Configure the cell...
         let dico = events[indexPath.row] as! NSDictionary
-        cell.textLabel?.text = dico["Nombre"] as? String
+        cell.titleLabel?.text = dico["Nombre"] as? String
+        cell.dateLabel.text = dico["Fecha"] as? String
         return cell
     }
  
