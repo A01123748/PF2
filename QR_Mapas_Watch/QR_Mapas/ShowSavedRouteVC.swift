@@ -19,6 +19,7 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     var managedObjectContext: NSManagedObjectContext? = nil
     var cAnnos = [CustomPointAnnotation]()
     var currentLocation:CLLocation? = nil
+    var instrucciones = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,8 +40,7 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
 
     
     func configureView() {
-        if let detail = self.detailItem {
-            print(self.detailItem?.name.description)
+        if self.detailItem != nil {
             //print(self.detailItem?.points)
             //print(self.detailItem?.value(forKey: "points"))
             let ps = self.detailItem?.value(forKey: "points") as! NSOrderedSet
@@ -153,6 +153,7 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         for ruta in resp.routes{
             mapa.add(ruta.polyline,level: MKOverlayLevel.aboveRoads)
             for paso in ruta.steps{
+                instrucciones.append(paso.instructions)
                 print(paso.instructions)
             }
         }
@@ -230,6 +231,18 @@ class ShowSavedRouteVC: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         }
         self.present(arViewController, animated: true, completion: nil)
         
+    }
+    @IBAction func shareRoute(_ sender: AnyObject) {
+        let routeName = self.detailItem?.name.description
+        var sharedObjects = [String]()
+        sharedObjects.append(routeName!)
+        for i in 0..<instrucciones.count{
+            sharedObjects.append(instrucciones[i])
+        }
+        
+        //let sharedObjects = mapa.annotations
+        let activitySN = UIActivityViewController(activityItems: sharedObjects, applicationActivities: nil)
+        self.present(activitySN, animated: true, completion: nil)
     }
 }
 

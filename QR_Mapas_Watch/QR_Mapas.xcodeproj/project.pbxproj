@@ -29,6 +29,8 @@
 		91B99F471DBDA8F400528E0F /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F431DBDA8F400528E0F /* hdar_close@2x.png */; };
 		91B99F481DBDA8F400528E0F /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B99F441DBDA8F400528E0F /* hdar_close@3x.png */; };
 		91B99F4A1DBDA91A00528E0F /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */; };
+		91B99F4C1DBDBFB100528E0F /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F4B1DBDBFB100528E0F /* EventsVC.swift */; };
+		91B99F4E1DBDC76A00528E0F /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99F4D1DBDC76A00528E0F /* EventDetailsVC.swift */; };
 		91CE55D71DBC09F900B208CC /* SavedRoutesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE55D61DBC09F900B208CC /* SavedRoutesVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		91B99F431DBDA8F400528E0F /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
 		91B99F441DBDA8F400528E0F /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
 		91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAnnotationView.swift; sourceTree = "<group>"; };
+		91B99F4B1DBDBFB100528E0F /* EventsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
+		91B99F4D1DBDC76A00528E0F /* EventDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
 		91C9ED9D1DAB42C9000F58E6 /* QR_Mapas_Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR_Mapas_Watch-Bridging-Header.h"; sourceTree = "<group>"; };
 		91C9EDA01DABE824000F58E6 /* QR_Mapas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QR_Mapas.entitlements; sourceTree = "<group>"; };
 		91CE55D61DBC09F900B208CC /* SavedRoutesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRoutesVC.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				913CF93B1DAAFB4400760749 /* PINDetailsVC.swift */,
 				91B99F491DBDA91A00528E0F /* TestAnnotationView.swift */,
 				913CF9251DA99A7600760749 /* Main.storyboard */,
+				91B99F4D1DBDC76A00528E0F /* EventDetailsVC.swift */,
+				91B99F4B1DBDBFB100528E0F /* EventsVC.swift */,
 				913CF9281DA99A7600760749 /* Assets.xcassets */,
 				913CF92A1DA99A7600760749 /* LaunchScreen.storyboard */,
 				913CF92D1DA99A7600760749 /* Info.plist */,
@@ -243,9 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				911CA87B1DAB3A8200A9A0C4 /* NavigationVC.swift in Sources */,
+				91B99F4C1DBDBFB100528E0F /* EventsVC.swift in Sources */,
 				91B99F391DBDA8E400528E0F /* ARAnnotation.swift in Sources */,
 				913CF91D1DA99A7500760749 /* AppDelegate.swift in Sources */,
 				91B99F3B1DBDA8E400528E0F /* ARConfiguration.swift in Sources */,
+				91B99F4E1DBDC76A00528E0F /* EventDetailsVC.swift in Sources */,
 				913CF9201DA99A7500760749 /* QR_Mapas.xcdatamodeld in Sources */,
 				91B99F311DBD440300528E0F /* ShowSavedRouteVC.swift in Sources */,
 				913CF9221DA99A7500760749 /* MasterViewController.swift in Sources */,

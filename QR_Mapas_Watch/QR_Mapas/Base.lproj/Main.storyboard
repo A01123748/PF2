@@ -55,6 +55,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyP-Nb-2mC">
                                 <state key="normal" title="Eventos"/>
+                                <connections>
+                                    <segue destination="4Y5-Ln-tOR" kind="show" id="AGY-6m-3ld"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-AA-cCZ">
                                 <state key="normal" title="Ver Rutas Guardadas"/>
@@ -158,16 +161,13 @@
                                             <segue destination="JEX-9P-axG" kind="show" id="AN9-QI-8hi"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Long press to insert new pin" id="hTw-9E-Dri"/>
-                                    <barButtonItem style="plain" id="qkJ-Wc-arl">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cl7-gI-SWT">
-                                            <rect key="frame" x="322" y="7" width="77" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Save Route"/>
-                                            <connections>
-                                                <action selector="saveRoute:" destination="ZKN-M1-Z3G" eventType="touchUpInside" id="jDp-eh-5nN"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ss7-bB-QOm"/>
+                                    <barButtonItem title="Long press to insert pin" id="hTw-9E-Dri"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hhh-0R-I4c"/>
+                                    <barButtonItem title="Save Route" id="3b5-KQ-rKO">
+                                        <connections>
+                                            <action selector="saveRoute:" destination="ZKN-M1-Z3G" id="eSC-zr-vdR"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -193,7 +193,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDG-Ww-XbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="-192"/>
+            <point key="canvasLocation" x="-1405.7971014492755" y="-193.20652173913044"/>
+        </scene>
+        <!--EventsVC-->
+        <scene sceneID="b1i-b0-EsA">
+            <objects>
+                <tableViewController id="4Y5-Ln-tOR" customClass="EventsVC" customModule="QR_Mapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AoK-5q-ZJo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="l3a-7X-sh8">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l3a-7X-sh8" id="tme-OM-YQC">
+                                    <frame key="frameInset" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="K4d-FD-4JQ" kind="showDetail" id="I7A-4I-zau"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Y5-Ln-tOR" id="PR4-9R-Otf"/>
+                            <outlet property="delegate" destination="4Y5-Ln-tOR" id="jLt-cQ-6cL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7w-md-PSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2223" y="-2133"/>
+        </scene>
+        <!--Event DetailsVC-->
+        <scene sceneID="swy-nG-SxQ">
+            <objects>
+                <viewController id="K4d-FD-4JQ" customClass="EventDetailsVC" customModule="QR_Mapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vxB-cv-MGH"/>
+                        <viewControllerLayoutGuide type="bottom" id="eb9-IO-B2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aat-8t-7xh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB1-Fr-rJ2">
+                                <frame key="frameInset" minX="46" minY="123" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-ei-lwb">
+                                <frame key="frameInset" minX="52" minY="278" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-4k-rLN">
+                                <frame key="frameInset" minX="52" minY="457" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsf-W7-6gP">
+                                <frame key="frameInset" minX="131" minY="123" width="256" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-KD-UDv">
+                                <frame key="frameInset" minX="131" minY="278" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-fA-nGP">
+                                <frame key="frameInset" minX="163" minY="457" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="Odp-KD-UDv" id="HVm-f1-Idt"/>
+                        <outlet property="descLabel" destination="lyJ-fA-nGP" id="J0d-lB-qTy"/>
+                        <outlet property="nameLabel" destination="hsf-W7-6gP" id="DuF-fZ-USV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Av-f6-a9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1533.3333333333335" y="-2133.4239130434785"/>
         </scene>
         <!--Acerca de -->
         <scene sceneID="QHl-Ar-ttW">
@@ -257,7 +355,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VBT-CS-kgo" id="QeC-dz-qYa">
-                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <frame key="frameInset" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -273,7 +371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEQ-ua-Cin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="-951"/>
+            <point key="canvasLocation" x="-617" y="-951"/>
         </scene>
         <!--DetailsVC-->
         <scene sceneID="h2f-mC-wVA">
@@ -452,6 +550,12 @@
                                     <barButtonItem title="AR" id="sOP-Ea-Qvp">
                                         <connections>
                                             <action selector="iniciarRA:" destination="XFh-Ux-zw7" id="eJm-Nl-DUb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IZV-mb-IZA"/>
+                                    <barButtonItem title="Share" id="LCf-FQ-J8F">
+                                        <connections>
+                                            <action selector="shareRoute:" destination="XFh-Ux-zw7" id="uaP-hH-RRY"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
